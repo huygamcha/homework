@@ -1,0 +1,56 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.line{
+    padding: 6px;
+}
+.line1{
+    font-size: 32px;
+    margin-bottom: 50px;
+    font-weight: 600;
+    color: #0000ff;
+}
+.line2{
+    font-size: 14px;
+    color: #333;
+}
+.line3{
+    
+}
+.line4 a{
+    color: #ff0000;
+    text-decoration: none;
+
+}
+.line4 a:hover{
+    color: #06F
+}
+.line5{
+
+}
+.line6{
+
+}
+.line7{
+
+}
+.line8{
+    color: #ff0000;
+
+}
+.task2{
+    text-align: center;
+}
+.task2::first-letter{
+    font-size: 15px;
+}
+
+h1{
+    font-size: 28px;
+    text-transform: uppercase;
+}
+li:nth-child(2n+2){
+    background-color: #fafafa;
+}
