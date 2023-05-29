@@ -2,6 +2,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    outline: 0;
 }
 .line{
     padding: 6px;
@@ -17,7 +18,7 @@
     color: #333;
 }
 .line3{
-    
+    text-indent: 30px;
 }
 .line4 a{
     color: #ff0000;
@@ -28,17 +29,15 @@
     color: #06F
 }
 .line5{
-
+    font-variant: small-caps;
 }
 .line6{
-
+    font-style: italic;
 }
 .line7{
-
 }
 .line8{
     color: #ff0000;
-
 }
 .task2{
     text-align: center;
@@ -53,4 +52,12 @@ h1{
 }
 li:nth-child(2n+2){
     background-color: #fafafa;
+}
+.quote::after{
+    content: '"';
+    display: inline;
+}
+.quote::before{
+    content: '"';
+    display: inline;
 }
