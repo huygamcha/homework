@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>D3S6E1</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            outline: 0;
+        }
+
+        .container {
+            padding-bottom: 16px;
+        }
+
+        .header__resusme {
+            background-color: #000;
+            color: #fff;
+            height: 140px;
+            display: flex;
+            align-items: center;
+        }
+
+        .header__resusme-heading {
+            text-transform: uppercase;
+            font-weight: 300;
+            margin-top: 60px;
+            margin-left: 40px;
+            font-size: 40px;
+        }
+
+        .container__name {
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 120px;
+            line-height: 120px;
+            color: #9da3a7;
+            font-weight: 200;
+            margin: 0px;
+            float: left;
+            margin-left: 65px;
+        }
+
+        .container__pro {
+            display: block;
+            float: left;
+            margin-left: 65px;
+            margin-bottom: 34px;
+        }
+
+        .content {
+            height: 1250px;
+        }
+
+        .content__contact {
+            height: calc(1500px - 250px);
+            display: flex;
+            justify-content: center;
+            background-color: #000;
+            color: #fff;
+        }
+
+        .content__history {}
+
+        .content__contact-img {
+            margin-top: 38px;
+            width: 330px;
+            height: 330px;
+        }
+
+        .block {
+            padding: 18px 0px;
+        }
+
+        .block__header {
+            font-size: 26px;
+            font-weight: 500;
+        }
+
+        .block__des {
+            font-size: 28px;
+            color: #b6b6b6;
+            line-height: 28px;
+
+        }
+
+        .content__contact-list {
+            list-style-type: disc;
+        }
+
+        .content__contact-item {
+            font-size: 28px;
+            color: #b6b6b6;
+            line-height: 28px;
+            padding: 12px 0px;
+
+        }
+
+        .content__contact-icon {
+            width: 16px;
+            height: 16px;
+            color: #fff;
+        }
+
+        h2 {
+            text-transform: uppercase;
+            margin-top: 36px;
+            margin-bottom: 0px;
+            color: #dcdcdc;
+            font-size: 38px;
+        }
+
+        .content__history {}
+
+        .content__history-block {}
+
+        .content__history-header {
+            text-transform: uppercase;
+            color: #9da3a7;
+            font-size: 40px;
+            margin-left: 44px;
+            margin-bottom: 10px;
+        }
+
+        .content__history-year {
+            margin-left: 44px;
+            font-weight: 700;
+
+        }
+
+        .content__history-info {
+            margin-left: 16px;
+        }
+
+        .content__history-info-header {
+            text-transform: uppercase;
+            color: #a0a6aa;
+            margin: 0px;
+            font-weight: 700;
+
+        }
+
+        .content__history-info-sub {
+            color: #9da3a7;
+            margin: 0px;
+        }
+
+        .content__history-info-des {
+            color: #000;
+            font-weight: 500;
+        }
+
+        .content__history-skills {
+            display: flex;
+            align-items: center;
+            margin: 2px 0px;
+        }
+
+        .content__history-width {
+            width: 242px;
+            height: 14px;
+            background-color: #9da3a7;
+            position: relative;
+            margin-left: 40px;
+        }
+
+        .content__history-width::after {
+            position: absolute;
+            content: "";
+            width: 200px;
+            height: 14px;
+            background-color: #000;
+        }
+        .wide1::after{
+            position: absolute;
+            content: "";
+            width: 130px;
+            height: 14px;
+            background-color: #000;
+        }
+        .wide2::after{
+            position: absolute;
+            content: "";
+            width: 200px;
+            height: 14px;
+            background-color: #000;
+        }
+        .wide3::after{
+            position: absolute;
+            content: "";
+            width: 160px;
+            height: 14px;
+            background-color: #000;
+        }
+        .wide4::after{
+            position: absolute;
+            content: "";
+            width: 190px;
+            height: 14px;
+            background-color: #000;
+        }
+        .wide5::after{
+            position: absolute;
+            content: "";
+            width: 150px;
+            height: 14px;
+            background-color: #000;
+        }
+        .wide6::after{
+            position: absolute;
+            content: "";
+            width: 230px;
+            height: 14px;
+            background-color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-4 header__resusme">
+                <h3 class="header__resusme-heading">Resusme</h3>
+            </div>
+            <div class="col-8">
+            </div>
+        </div>
+        <div class="container__name">
+            <h1 class="container__name">alan walker</h1>
+            <h3 class="container__pro">Graphic Designer</h3>
+        </div>
+        <div class="row content">
+
+            <div class="col-4 content__contact">
+                <div class="">
+                    <img class="content__contact-img" src="./photo.png" alt="">
+                    <h2 class="content__contact-profile">profile</h2>
+                    <div class="block">
+                        <div class="block__header">Name</div>
+                        <div class="block__des">Alan Walker</div>
+                    </div>
+
+                    <div class="block">
+                        <div class="block__header">Date of Birth</div>
+                        <div class="block__des">10/5/1989</div>
+                    </div>
+
+                    <div class="block">
+                        <div class="block__header">Phone</div>
+                        <div class="block__des">0703414500</div>
+                    </div>
+
+                    <div class="block">
+                        <div class="block__header">Email</div>
+                        <div class="block__des">alanwalker@gmail.com</div>
+                    </div>
+
+                    <div class="block">
+                        <div class="block__header">Website</div>
+                        <div class="block__des">www.yourdomain.com</div>
+                    </div>
+                    <h2 class="content__contact-profile">Hobbies</h2>
+                    <ul class="content__contact-list">
+                        <li class="content__contact-item">
+
+                            Dance
+                        </li>
+                        <li class="content__contact-item">
+
+                            Read Book
+                        </li>
+                        <li class="content__contact-item">
+
+                            Swimming
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="content__history">
+                    <div class="row content__history-block">
+                        <div class="content__history-header">job experiences</div>
+                        <h4 class="col-3">
+                            <div class="content__history-year">
+                                2014-2015
+                            </div>
+                        </h4>
+                        <div class="col-9">
+                            <div class="content__history-info">
+                                <h4 class="content__history-info-header">company name 1</h4>
+                                <h4 class="content__history-info-sub">Position held</h4>
+                                <p class="content__history-info-des">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit. Nolutpat dolor, hendrerit faucibus eros nibh ut nunc. Proin luctus urna i</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h4 class="col-3">
+                            <div class="content__history-year">
+                                2011-2013
+                            </div>
+                        </h4>
+                        <div class="col-9">
+                            <div class="content__history-info">
+                                <h4 class="content__history-info-header">company name 2</h4>
+                                <h4 class="content__history-info-sub">Position held</h4>
+                                <p class="content__history-info-des">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit. Nolutpat dolor, hendrerit faucibus eros nibh ut nunc. Proin luctus urna i</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h4 class="col-3">
+                            <div class="content__history-year">
+                                2009-2011
+                            </div>
+                        </h4>
+                        <div class="col-9">
+                            <div class="content__history-info">
+                                <h4 class="content__history-info-header">company name 3</h4>
+                                <h4 class="content__history-info-sub">Position held</h4>
+                                <p class="content__history-info-des">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit. Nolutpat dolor, hendrerit faucibus eros nibh ut nunc. Proin luctus urna i</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row content__history-block">
+                        <div class="content__history-header">education</div>
+                        <h4 class="col-3">
+                            <div class="content__history-year">
+                                2005-2009
+                            </div>
+                        </h4>
+                        <div class="col-9">
+                            <div class="content__history-info">
+                                <h4 class="content__history-info-header">university name</h4>
+                                <h4 class="content__history-info-sub">Course studied</h4>
+                                <p class="content__history-info-des">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit. Nolutpat dolor, hendrerit faucibus eros nibh ut nunc. Proin luctus urna i</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <h4 class="col-3">
+                            <div class="content__history-year">
+                                2000-2005
+                            </div>
+                        </h4>
+                        <div class="col-9">
+                            <div class="content__history-info">
+                                <h4 class="content__history-info-header">university name</h4>
+                                <h4 class="content__history-info-sub">Course studied</h4>
+                                <p class="content__history-info-des">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit. Nolutpat dolor, hendrerit faucibus eros nibh ut nunc. Proin luctus urna i</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row content__history-block">
+
+                        <div class="content__history-header">professional skills</div>
+                        <div class="content__history-skills">
+                            <h4 class="col-4">
+                                <div class="content__history-year">
+                                    Photoshop
+                                </div>
+                            </h4>
+                            <div class="col-8">
+                                <div class="content__history-width"></div>
+                            </div>
+                        </div>
+                        <div class="content__history-skills">
+                            <h4 class="col-4">
+                                <div class="content__history-year">
+                                    Illustrator
+                                </div>
+                            </h4>
+                            <div class="col-8">
+                                <div class="content__history-width wide1"></div>
+                            </div>
+                        </div>
+                        <div class="content__history-skills">
+                            <h4 class="col-4">
+                                <div class="content__history-year">
+                                    CSS (3)
+                                </div>
+                            </h4>
+                            <div class="col-8">
+                                <div class="content__history-width wide2"></div>
+                            </div>
+                        </div>
+                        <div class="content__history-skills">
+                            <h4 class="col-4">
+                                <div class="content__history-year">
+                                    HTML (5)
+                                </div>
+                            </h4>
+                            <div class="col-8">
+                                <div class="content__history-width wide4"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row content__history-block">
+
+                        <div class="content__history-header">persional skills</div>
+                        <div class="content__history-skills">
+                            <h4 class="col-4">
+                                <div class="content__history-year">
+                                    Team Work
+                                </div>
+                            </h4>
+                            <div class="col-8">
+                                <div class="content__history-width wide3"></div>
+                            </div>
+                        </div>
+                        <div class="content__history-skills">
+                            <h4 class="col-4">
+                                <div class="content__history-year">
+                                    Timekeeping
+                                </div>
+                            </h4>
+                            <div class="col-8">
+                                <div class="content__history-width wide6"></div>
+                            </div>
+                        </div>
+                        <div class="content__history-skills">
+                            <h4 class="col-4">
+                                <div class="content__history-year">
+                                    Organization    
+                                </div>
+                            </h4>
+                            <div class="col-8">
+                                <div class="content__history-width wide5"></div>
+                            </div>
+                        </div>
+                        <div class="content__history-skills">
+                            <h4 class="col-4">
+                                <div class="content__history-year">
+                                    Communication
+                                </div>
+                            </h4>
+                            <div class="col-8">
+                                <div class="content__history-width wide4"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
