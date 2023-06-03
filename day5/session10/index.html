@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">N
+    <title>Document</title>
+    <style>
+        .input-row {
+            display: flex;
+            margin-bottom: 6px;
+
+        }
+
+        form label {
+            /* display: block; */
+            min-width: 120px;
+            padding: 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <div class="input-row">
+            <label for="first-name">First name</label>
+            <input autofocus required minlength="4" maxlength="255" placeholder="First name" type="text" name="" id="first-name">
+        </div>
+        <div class="input-row">
+            <label for="first-name">Last name</label>
+            <input required minlength="4" maxlength="255" placeholder="Last name" type="text" name="" id="Last-name">
+        </div>
+        <div class="input-row">
+            <label for="password">Password</label>
+            <input required pattern="^(?=.*[A-Z].*[A-Z])(?=.*[!@#$&*])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8}$"
+                placeholder="Password" type="password" name="" id="password">
+        </div>
+        <div class="input-row">
+            <label for="age">Age</label>
+            <input required min="18" max="100" placeholder="Age" type="number" name="" id="age">
+        </div>
+
+        <div class="input-row">
+            <label for="gender">Gender</label>
+            <label>
+                <!-- name giống nhau để click 1 trong 2 -->
+                <!-- xoá phần for của thẻ label đi -->
+
+                <input type="radio" name="gender" id="" value="male">Male
+                <label>
+                    <!-- mặc định đánh check trước -->
+                    <input checked type="radio" name="gender" id="" value="female">Female
+                </label>
+        </div>
+
+        <div class="input-row">
+            <label for="favorite">Favorite</label>
+            <label>
+                <input type="checkbox" id="favorite" value="book">Book
+            </label>
+            <label>
+                <input checked type="checkbox" id="favorite" value="swimming">Swimming
+            </label>
+            <label>
+                <input type="checkbox" id="favorite" value="Chess">Chess
+            </label>
+            <label>
+                <input type="checkbox" id="favorite" value="football">Football
+            </label>
+        </div>
+        <div class="input-row">
+            <label for="tel">Tel</label>
+            <input pattern="(84|0[3|5|7|8|9])+([0-9]{8})\b" required placeholder="Tel" type="tel" name="" id="tel">
+        </div>
+
+        <div class="input-row">
+            <label for="email">Email</label>
+            <input required placeholder="Email" type="email" name="" id="email">
+        </div>
+
+        <div class="input-row">
+            <label for="brief">Say about me</label>
+            <!-- giới hạn mỗi dòng 30 kí tự và chiều dài xuất hiện là 10 cột -->
+            <textarea placeholder="say about me" name="brief" id="" cols="60" rows="10"></textarea>
+        </div>
+
+        <div class="input-row">
+            <label for="provice">Provice/City</label>
+            <select name="provice" id="provice">
+                <option value="1">--Vui lòng chọn tỉnh/thành phố--</option>
+                <option value="2">Hà Nội</option>
+                <option value="3">TP HCM</option>
+                <option selected value="4">Đà Nẵng</option>
+            </select>
+        </div>
+
+        <input type="submit" value="submit">
+
+    </form>
+</body>
+
+</html>
