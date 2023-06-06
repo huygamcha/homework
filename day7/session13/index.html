@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 13</title>
+    <style>
+        #firstnumber{
+            padding: 12px;
+        }
+        #secondnumber{
+            padding: 12px;
+        }
+        .form-control{
+            padding: 12px;
+            margin: 12px;
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+        }
+        #math{
+            padding: 12px;
+        }
+        option{
+            font-size: 16px;
+        }
+        label{
+            margin-bottom: 6px;
+        }
+        #submit{
+            padding: 12px;
+            margin: 12px 24px;
+        }
+        #submit:hover{
+           cursor: pointer;
+           background-color: antiquewhite;
+           
+        }
+    </style>
+</head>
+<body>
+    <!-- Workshop -->
+        <div class="form-control">
+            <label for="firstnumber">Firstnumber</label>
+            <input autofocus placeholder="Nhập giá trị vào đây" type="number" name="a" id="firstnumber">
+        </div>
+        <div class="form-control">
+            <label for="secondnumber">Secondnumber</label>
+            <input placeholder="Nhập giá trị vào đây" type="number" name="a" id="secondnumber">
+        </div>
+        <div class="form-control">
+            <select name="op" id="math">
+                <option value="0">--Chọn biểu thức--</option>
+                <option value="1">Add</option>
+                <option value="2">Sub</option>
+                <option value="3">Div</option>
+                <option value="4">Mul</option>
+            </select>
+        </div>
+        <input id="submit" type="submit" value="Submit" onclick="Submit()">
+        <script>
+            // // Regular expression
+            // let string = '122d3'
+            // // regex pattern
+            // let regex = /^[a-zA-Z0-9]/g;
+    
+            // let result = regex.test(string);
+            
+            // let mobile = '0703414500'
+            // let regexMobile= /^[a-zA-Z0-9]{10}/
+            // // kiểm tra xem sđt có thuộc khoảng yc
+            // let resultMobile = regexMobile.test(mobile);
+            // console.log(resultMobile)
+    
+            // let resulte = regexMobile.exec(mobile);
+            // console.log(resulte)
+    
+    
+            
+            // <!-- Task1 -->
+            // let a  = prompt('nhập dữ liệu của task 1')
+            // if (a % 2 == 0) {
+            //     console.log('đây là số chẵn')
+    
+            // }
+            // else {
+            //     console.log('đây là số lẻ')
+            // }
+            // Task2
+            // let b = prompt('nhập giá trị của task2, một ngày bất kì trong tuần')
+            // b = parseInt(b)
+            // if (b === 3 || b === 2) {
+            //     console.log('Ngày đầu tuần')
+            // }
+            // else if (b === 6 || b === 4 ||  b === 5) {
+            //     console.log('Ngày giữa tuần')
+            // }
+            // else if (b === 7 || b === 8) {
+            //     console.log('Ngày cuối tuần')
+            // }
+            // else {
+            //     console.log('Giá trị không tồn tại, nhập lại')
+            // }
+                // const getvaluea= document.querySelector('#firstnumber')
+                // console.log([getvaluea])
+            // var a = document.querySelector('#firstnumber');
+                
+            // Task 4
+            function Submit(e){
+                var a = document.querySelector('#firstnumber');
+                var b = document.querySelector('#secondnumber');
+                var c = document.querySelector('#math');
+                
+                console.log(b.value, c.value)
+                switch (parseInt(c.value)){
+                    case 1:
+                        console.log('Tổng của biểu thức là',parseInt(a.value) + parseInt(b.value))
+                        break;
+                    case 2:
+                        console.log('Hiệu của biểu thức là',parseInt(a.value) - parseInt(b.value))
+                        break;
+                    case 3:
+                        console.log('Thương của biểu thức là',(parseInt(a.value) / parseInt(b.value)).toFixed(2))
+                        break;
+                    case 4:
+                        console.log('Tích của biểu thức là',(parseInt(a.value)*parseInt(b.value)).toFixed(2))
+                        break;
+                    default:
+                        console.log('Bạn chưa chọn biểu thức, vui lòng chọn!')
+                        break;
+                        
+                }
+            }
+    
+  
+   
+
+    </script>
+</body>
+</html>
