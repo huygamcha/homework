@@ -82,11 +82,12 @@
             // let a  = prompt('nhập dữ liệu của task 1')
             // if (a % 2 == 0) {
             //     console.log('đây là số chẵn')
-    
             // }
             // else {
             //     console.log('đây là số lẻ')
             // }
+
+
             // Task2
             // let b = prompt('nhập giá trị của task2, một ngày bất kì trong tuần')
             // b = parseInt(b)
@@ -106,32 +107,38 @@
                 // console.log([getvaluea])
             // var a = document.querySelector('#firstnumber');
                 
-            // Task 4
-            function Submit(e){
-                var a = document.querySelector('#firstnumber');
-                var b = document.querySelector('#secondnumber');
-                var c = document.querySelector('#math');
+            // Task3
+            let myArr = ['Thứ 2', 'Thứ y', 'Thứ 3', 'Thứ x', 'Thứ 5', 'Thứ 6', 'Thứ 7'];
+            myArr.push('Chủ Nhật') 
+            myArr.splice(1,1)     
+            myArr.splice(2, 1,'Thứ 4')
+            console.log(myArr)
+
+            // // Task 4
+            // function Submit(e){
+            //     var a = document.querySelector('#firstnumber');
+            //     var b = document.querySelector('#secondnumber');
+            //     var c = document.querySelector('#math');
                 
-                console.log(b.value, c.value)
-                switch (parseInt(c.value)){
-                    case 1:
-                        console.log('Tổng của biểu thức là',parseInt(a.value) + parseInt(b.value))
-                        break;
-                    case 2:
-                        console.log('Hiệu của biểu thức là',parseInt(a.value) - parseInt(b.value))
-                        break;
-                    case 3:
-                        console.log('Thương của biểu thức là',(parseInt(a.value) / parseInt(b.value)).toFixed(2))
-                        break;
-                    case 4:
-                        console.log('Tích của biểu thức là',(parseInt(a.value)*parseInt(b.value)).toFixed(2))
-                        break;
-                    default:
-                        console.log('Bạn chưa chọn biểu thức, vui lòng chọn!')
-                        break;
-                        
-                }
-            }
+            //     console.log(b.value, c.value)
+            //     switch (parseInt(c.value)){
+            //         case 1:
+            //             console.log('Tổng của biểu thức là',parseInt(a.value) + parseInt(b.value))
+            //             break;
+            //         case 2:
+            //             console.log('Hiệu của biểu thức là',parseInt(a.value) - parseInt(b.value))
+            //             break;
+            //         case 3:
+            //             console.log('Thương của biểu thức là',(parseInt(a.value) / parseInt(b.value)).toFixed(2))
+            //             break;
+            //         case 4:
+            //             console.log('Tích của biểu thức là',(parseInt(a.value)*parseInt(b.value)).toFixed(2))
+            //             break;
+            //         default:
+            //             console.log('Bạn chưa chọn biểu thức, vui lòng chọn!')
+            //             break;
+            //     }
+            // }
     
   
    
