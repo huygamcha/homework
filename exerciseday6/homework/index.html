@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D6E</title>
+    <style>
+        button{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+        }
+        .square{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(150, 175, 38);
+        }
+        .task6{
+            width: 300px;
+            height: 300px;
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+        <button onclick="isconfirm()">Delete</button>
+        <div class="square">Square</div>
+        <!-- <button onclick="addcart()" class="task6">Thêm vào giỏ hàng</button> -->
+        <input type="text" name="" id="task7a" onkeypress="onpress()">
+        <input type="text" name="" id="task7b" onkeydown="ondown()">
+        <input type="text" name="" id="task7c" onkeyup="onup()">
+
+    <script>
+        // <!-- task1 -->
+        // let name = prompt('Nhập tên của bạn')
+        // let mypassword = prompt('Nhập mật khẩu của bạn')
+        // console.log('Tên của bạn là:', name,'\nMật khẩu của bạn là',mypassword )
+        // task2
+        // let a = prompt('Nhập giá trị a')
+        // let b = prompt('Nhập giá trị b')
+        // console.log('Kết quả a + b', parseInt(a) + parseInt(b),'\nKết quả a + b',parseInt(a)-+ parseInt(b) )
+        // task3
+        // function isconfirm(){
+        //     let isConfirm = confirm('Bạn có muốn xoá thẻ record này không');
+        //     console.log(isConfirm)
+        // }
+        // task5
+        // var getInput = prompt('Nhập giá trị vào đây')
+        // if (typeof getInput === 'Number' ) {
+        //     console.log('Đây là kiểu dữ liệu sô')
+        // }
+        // else {
+        //     console.log('Đây không phải là kiểu dữ liệu số')
+        // }
+        // Task6
+        // function addcart(){
+        //     console.log('Bạn đã thêm vào giỏ hàng thành công!')
+        // }
+        // Task7
+            function onpress (){
+                var a = document.querySelector('#task7a').value;
+                console.log('aaaaa')
+            }
+
+            function ondown(){
+                var b = document.querySelector('#task7b').value;
+                console.log('bbbbbb')
+
+            }
+
+            function onup(){
+                var c = document.querySelector('#task7c').value;
+                console.log(c)
+            }
+    </script>
+</body>
+</html>
