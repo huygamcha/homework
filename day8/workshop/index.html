@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAY8WS</title>
+    <style>
+        .form{
+            display: flex;
+            flex-direction: column;
+        }
+        #firstnumber{
+            width: 200px;
+        }
+        #secondnumber{
+            width: 200px;
+        }
+        #select{
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="form">
+        <label for="firstnumber">First number</label>
+        <input type="number" name="" id="firstnumber">
+    </div>
+
+    <div class="form">
+        <label for="secondnumber">Second number</label>
+        <input type="number" name="" id="secondnumber">
+    </div>
+    <div class="form">
+        <label for="math">Chọn phép toán</label>
+        <select name="" id="select">
+            <option value="1">Add</option>
+            <option value="2">Sub</option>
+            <option value="3">Div</option>
+            <option value="4">Mul</option> 
+        </select>
+    </div>
+    <input onclick="onlick()" type="submit" value="Submit">
+    <script>
+        // task1
+        // 
+        // function sum(a,b){
+        //     return a+ b
+        // }
+        // console.log('<<=== sum(3,5) ===>>', sum(3,5));
+        // function sub(a,b){
+        //     return a - b
+        // }
+        // console.log('<<=== sub(3,1) ===>>', sub(3,1));
+        
+        // task 2
+            // function onlick(){
+            //     let a = parseInt(document.querySelector('#firstnumber').value) 
+            //     let b = parseInt(document.querySelector('#secondnumber').value)
+
+            //     let c = document.querySelector('#select').value
+            //     switch (parseInt(c)){
+            //         case 1:
+            //             console.log('<<=== Tổng của biểu thức  ===>>', a + b );
+            //             break;
+            //         case 2:
+            //             console.log('<<=== Hiệu của biểu thức  ===>>', a - b );
+            //             break;
+            //         case 3:
+            //             console.log('<<=== Thương của biểu thức  ===>>', (a/b).toFixed(2) );
+            //             break;
+            //         case 4:
+            //             console.log('<<=== Tích của biểu thức  ===>>', a * b );
+            //             break;
+            //     }
+            // }
+            // còn phần yêu cầu phải nhập chưa làm được
+
+            // task3
+            // function math(a, b, type){
+            //     a = parseInt(a)
+            //     b = parseInt(b)
+            //     switch (type){
+            //         case 'add':
+            //             return a + b;
+            //             break;
+            //         case 'sub':
+            //             return a - b;
+            //             break;
+            //         case 'div':
+            //             return (a/b).toFixed(2);
+            //             break;
+            //         case 'mul':
+            //             return a * b;
+            //             break;
+            //         default:
+            //             console.log('<<=== Nhập sai ===>>');
+            //     }
+            // }
+            // console.log('<<=== Giá trị của biểu thức là ===>>',  math(3, 4, 'div')  );
+          
+            // task 4
+            // function student(name, age, gender, date, height, weight, nation){
+            //     this.name = name;
+            //     this.age = age;
+            //     this.gender = gender;
+            //     this.date = date;
+            //     this.weight = weight;
+            //     this.nation = nation;
+            // }
+
+            // task5
+            function user(id, name, email, gender){
+                this.id = id;
+                this.name = name;
+                this.email = email;
+                this.gender = gender;
+            }
+            // console.log('<<=== user ===>>', user);
+            let userA = new user(123, 'le huynh huy','lehuynhhuy2002@gmail.com', 'male'); 
+            userA = { ...userA, name: 'phuong nam' }
+            console.log('<<===  Sau khi thay đổi tên  ===>>', userA.name );
+
+            let userB = new user(32,'le ngoc han', 'ngochan@gmail.com', 'female')
+            userB =  {...userB, role: 'admin'};
+            console.log('<<=== Add thêm một trường role ===>>', userB);
+
+            let merge = {...user, ...userB};
+            console.log('<<=== Object được gộp là ===>>', merge);
+
+    
+
+
+    </script>
+</body>
+</html>

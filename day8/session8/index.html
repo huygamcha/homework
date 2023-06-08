@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Function, Object</title>
 </head>
+
 <body>
     <script>
         // function
@@ -20,16 +22,16 @@
 
         // 1. cách tạo một object
         function student(name, age) {
-            this.age= age;
-            this.name= name;
+            this.age = age;
+            this.name = name;
         }
-        let studentA = new student('huy', 18,' a')
+        let studentA = new student('huy', 18, ' a')
 
         console.log(studentA)
-        let studentB = {name: 'nga', age: 18}
+        let studentB = { name: 'nga', age: 18 }
         console.log(studentB)
 
-        let studentC = {name: 'nga'}
+        let studentC = { name: 'nga' }
         console.log(studentC)
 
 
@@ -38,24 +40,39 @@
         // studentC.name = 'nam'
         // cách 2
         // ESC spread operator in javascript
-        studentB = {...studentB,age: 32}
-        console.log(studentB) 
+        studentB = { ...studentB, age: 32 }
+        console.log(studentB)
 
         // 3. Cách thêm giá trị vào  c1
-        studentC = {...studentC, email: 'student@gmail.com'}
+        studentC = { ...studentC, email: 'student@gmail.com' }
         console.log('<<=== studentC.email ===>>', studentC.email);
         // cách gộp 2 object lại với nhau c2
 
 
+        // 4. Cách xoá thuộc tính
+        delete studentC.email;
+        console.log('<<=== studentC.email ===>>', studentC.email);
+
+        // Các phương thức object có sẵn trong js
+        let mystring = 'lehuynhhuy'
+        console.log(mystring.toLocaleUpperCase())
+        // hay dùng
+        // float
+        // date object
 
 
         // console.log(studentA.name
         // console.log('<<=== studentA.name ===>>', studentA.name);
-        
 
 
+        // function với giá trị đối số mặc định
+        function user(name, role = 'user'){
+            console.log('<<=== name ===>>', name, role);
+        }
+        user('Huy',12)
 
 
     </script>
 </body>
+
 </html>
