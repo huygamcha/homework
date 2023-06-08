@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function, Object</title>
+</head>
+<body>
+    <script>
+        // function
+        // function name(){
+        //    render = function(){
+        //     console.log('name');
+        //    };
+        // }
+        // console.log(name.render)
+
+        // Object
+
+        // 1. cách tạo một object
+        function student(name, age) {
+            this.age= age;
+            this.name= name;
+        }
+        let studentA = new student('huy', 18,' a')
+
+        console.log(studentA)
+        let studentB = {name: 'nga', age: 18}
+        console.log(studentB)
+
+        let studentC = {name: 'nga'}
+        console.log(studentC)
+
+
+        // 2. cách sửa giá trị trong object
+        // cách 1 
+        // studentC.name = 'nam'
+        // cách 2
+        // ESC spread operator in javascript
+        studentB = {...studentB,age: 32}
+        console.log(studentB) 
+
+        // 3. Cách thêm giá trị vào  c1
+        studentC = {...studentC, email: 'student@gmail.com'}
+        console.log('<<=== studentC.email ===>>', studentC.email);
+        // cách gộp 2 object lại với nhau c2
+
+
+
+
+        // console.log(studentA.name
+        // console.log('<<=== studentA.name ===>>', studentA.name);
+        
+
+
+
+
+    </script>
+</body>
+</html>
