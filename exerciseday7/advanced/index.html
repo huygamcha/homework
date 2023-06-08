@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D7E2P1</title>
+</head>
+
+<body>
+    <script>
+        // task 1
+        // let a = parseFloat(prompt('Nhập số điểm trung bình'))
+        // if (a >= 9) {
+        //     console.log('XUẤT SẮC')
+        // } 
+        // else if   (a < 9 && a >=8)
+        // {
+        //     console.log('GIỎI')
+        // }
+        // else if ( a < 8 && a >= 6.5){
+        //     console.log('KHÁ')
+        // }
+        // else if (a < 6.5 && a >= 5){
+        //     console.log('TRUNG BÌNH')
+        // }
+        // else {
+        //     console.log('YẾU')
+        // }
+
+        // task 2
+        // tong = 0
+        // let b = parseInt(prompt('Nhập số chữ điện'))
+        // if ( b <= 100) {
+        //     console.log('Tổng tiền phải trả là :', 500*b,'đ' ) 
+        // }
+        // else if ( b<=150 && b > 100){
+        //     console.log('Tổng tiền phải trả là :', 500*100 + 900*(b-100),'đ' ) 
+        // }
+        // else if (b <= 200 && b > 150){
+        //     console.log('Tổng tiền phải trả là :', 500*100 + 900*50 +1210*(b-150),'đ' ) 
+        // }
+        // else if ( b<=300 && b > 200){
+        //     console.log('Tổng tiền phải trả là :', 500*100 + 900*50 +1210*50 + 1340*(b-200),'đ') 
+        // }
+        // else if ( b>= 301){
+        //     console.log('Tổng tiền phải trả là :', 500*100 + 900*50 +1210*50 + 1340*100 + 1401*(b-200),'đ') 
+        // }
+
+        // task3
+        // let c = parseInt(prompt('Nhập tháng'))
+        // switch(c){
+        //     case 1:
+        //     case 2:
+        //     case 3:
+        //         console.log('Xuân')
+        //         break;
+        //     case 4:
+        //     case 5:
+        //     case 6:
+        //         console.log('Hạ')
+        //         break;
+        //     case 7:
+        //     case 8:
+        //     case 9:
+        //         console.log('Thu')
+        //         break;
+        //     case 10:
+        //     case 11:
+        //     case 12:
+        //         console.log('Đông')
+        //         break;
+        // }
+
+        // task4
+        // for (let i = 5; i >= 1; i--) {
+        //     var t = ''
+        //     for (let j = i; j >= 1; j--) {
+        //         t += '*'
+        //     }
+        //     console.log(t)
+        // }
+
+        // Task5
+        // for (let i = 1; i <=10; i++) {
+        //     console.log(`${1} * ${i} = ${i*1}`)
+        // }
+
+        // task6
+        let a = 1000000
+        for (let i = 1; i <= 100000; i++) {
+
+            console.log('An N: De nop tien\nAn R: De rut tien\nAn X: De xem so du')
+            let  b = prompt('Vui long chon chuc nang:')
+            switch (b){
+                case 'N':
+                    a += parseFloat(prompt('Nhap so tien can nop:'))
+                    break;
+                case 'R':
+                    let c = parseFloat(prompt('Nhap so tien can rut:'))
+                    if ( a - c < 50000){
+                        alert('Khong the rut do tai khoan se duoi 50000')
+                    }
+                    break;
+                case 'X':
+                    alert(`Tai khoan hien co la ${a}đ`)
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>
