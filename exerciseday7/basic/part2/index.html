@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D7E1P2</title>
+    <style>
+        td {
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+
+
+        // Task1
+        // let car = ['Mercedes', 'Toyota', 'BMW', 'Honda', 'Suzuki']  
+        // let html = `<ul>`
+        // for (i in car){
+        //     html += `<li>${i}</li>`
+        // }
+        // html += `</u>`
+        // document.write(html)
+
+        // task2
+        let branchs = [
+            { name: 'Name', quality: 'Quality', price: 'Price' },
+            { name: 'Áo bull Size M', quality: 2, price: 160000 },
+            { name: 'Áo khoác gió NorthFace Size L', quality: 3, price: 600000 },
+            { name: 'Quần Jean Nam Size 30', quality: 1, price: 350000 },
+        ]
+        let html = `<table>`
+        for (i in branchs) {
+            html += `<tr><td>${branchs[i].name}</td><td>${branchs[i].quality}</td><td>${branchs[i].price} đ</td></tr>`
+        }
+        html += `</table>`
+        document.write(html)
+
+        let htmls = `<table>`
+        let tong = 0
+            
+        for (i in branchs) {
+            if (i == 0) {
+                htmls += `<tr><td>${branchs[i].name}</td><td>${branchs[i].quality}</td><td>${branchs[i].price}</td><td>Bills</td></tr>`
+            }
+            else {
+                htmls += `<tr><td>${branchs[i].name}</td><td>${branchs[i].quality}</td><td>${branchs[i].price} đ</td><td>${branchs[i].price * branchs[i].quality} đ</td></tr>`
+                tong += parseInt(branchs[i].price)
+            }
+        }
+        htmls += `<tr><td colspan = "3">Tổng bill là: </td><td>${tong} đ</td></tr>`
+        htmls += `</table>`
+        document.write(htmls)
+
+
+    </script>
+
+</body>
+
+</html>
