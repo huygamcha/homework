@@ -6,6 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>D7E2P1</title>
+    <style>
+        tr td{
+            padding: 6px;
+        }
+    </style>
 </head>
 
 <body>
@@ -83,31 +88,42 @@
         // }
 
         // Task5
-        // for (let i = 1; i <=10; i++) {
-        //     console.log(`${1} * ${i} = ${i*1}`)
-        // }
+        let htmls = `<table>`
+        for (let j = 1; j <=9; j++){
+
+            htmls += `<tr>`
+            for (let i = 1; i <=10; i++) {
+                htmls += `<td>`
+                htmls += `${i} * ${j} = ${i*j}`
+                htmls += `</td>`
+            }
+            htmls += `</tr>`  
+        }
+
+        htmls += `</table>`
+        document.write(htmls)
 
         // task6
-        let a = 1000000
-        for (let i = 1; i <= 100000; i++) {
+        // let a = 1000000
+        // for (let i = 1; i <= 100000; i++) {
 
-            console.log('An N: De nop tien\nAn R: De rut tien\nAn X: De xem so du')
-            let  b = prompt('Vui long chon chuc nang:')
-            switch (b){
-                case 'N':
-                    a += parseFloat(prompt('Nhap so tien can nop:'))
-                    break;
-                case 'R':
-                    let c = parseFloat(prompt('Nhap so tien can rut:'))
-                    if ( a - c < 50000){
-                        alert('Khong the rut do tai khoan se duoi 50000')
-                    }
-                    break;
-                case 'X':
-                    alert(`Tai khoan hien co la ${a}đ`)
-                    break;
-            }
-        }
+        //     console.log('An N: De nop tien\nAn R: De rut tien\nAn X: De xem so du')
+        //     let  b = prompt('Vui long chon chuc nang:')
+        //     switch (b){
+        //         case 'N':
+        //             a += parseFloat(prompt('Nhap so tien can nop:'))
+        //             break;
+        //         case 'R':
+        //             let c = parseFloat(prompt('Nhap so tien can rut:'))
+        //             if ( a - c < 50000){
+        //                 alert('Khong the rut do tai khoan se duoi 50000')
+        //             }
+        //             break;
+        //         case 'X':
+        //             alert(`Tai khoan hien co la ${a}đ`)
+        //             break;
+        //     }
+        // }
     </script>
 </body>
 
