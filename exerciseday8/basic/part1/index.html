@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D8BP1</title>
+    <style>
+    .input-form{
+        display: flex;
+        padding: 6px
+    }
+    label{
+        min-width: 150px;
+    }
+    input{
+        margin-right: 4px;
+        text-align: right;
+    }
+    </style>
+
+</head>
+<body>
+    <div class="input-form">
+        <label for="price">Giá mỗi sản phẩm </label>
+        <input onkeyup="change()" type="number" name="price" id="price">  đ
+    </div>
+    <div class="input-form">
+        <label for="quality">Số lượng</label>
+        <input  onkeyup="change()" type="number" name="quality" id="quality">
+    </div>
+    <div class="input-form">
+        <label for="result">Tổng tiền</label>
+        <input  type="result" name="result" id="result">đ
+    </div>
+
+    <script>
+        function change() {
+            let a = parseInt(document.getElementById('price').value);
+            let b = parseInt(document.getElementById('quality').value);
+         
+           
+                document.getElementById('result').value = a * b
+         
+
+        }
+    </script>
+</body>
+</html>

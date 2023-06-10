@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D8BP3</title>
+</head>
+<body>
+    <ul id="list">
+        <li class="child_one">Child 1</li>
+        <li class="child_two">
+            <img src="./expressjs.png" alt="photo" />
+        </li>
+        <li class="child_three"><a href="link3">Child 3</a></li>
+    </ul>
+    <script>
+        let a = document.querySelector('ul');
+        // thêm thuộc tính vào DOM cách thứ 1
+        a.setAttribute('class', 'list')
+        // cách thứ 2
+        // a.classList.add('list');
+        console.log('<<=== a ===>>', a);
+
+        // lấy phần tử li đầu tiên và in ra
+        let b = document.querySelector('ul li:first-child')
+        console.log(b.textContent)
+
+        // lấy thuộc tính src và alt
+        let c = document.querySelector('ul li img')
+        console.log(c.getAttribute('src'))
+        console.log(c.getAttribute('alt'))
+
+        // thay đổi thuộc tính src và alt
+        c.setAttribute("src","./b1.jpg")
+        c.setAttribute('alt','pho')
+
+        // lấy tên class của thẻ li thứ 3
+        let d = document.querySelector('ul li:last-child')
+        console.log(d.getAttribute('class'))
+    </script>
+</body>
+</html>

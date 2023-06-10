@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D8AP1</title>
+    <style>
+        #imgg{
+            display: flex;
+            justify-content: center;
+        }
+        .submit{
+            display: flex;
+            justify-content: space-around;
+        }
+        input{
+            width: 150px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="imgg" >
+        <img src="./b1.jpg" alt="" >
+    </div>
+    <div class="submit">
+        <input onclick="changepre()" type="submit" value="Pre">
+        <input onclick="changenext()" type="submit" value="Next">
+    </div>
+    <script>
+        let i = 4;
+        let element = document.getElementById('imgg');
+        function changenext(){
+                if ( i > 4 ) i = 1;
+                element.innerHTML = ` <img src="./b${i}.jpg" alt="" >`
+                i++;
+        }
+        function changepre(){
+                if ( i <= 0 ) i = 4;
+                element.innerHTML = ` <img src="./b${i}.jpg" alt="" >`
+                i--;
+        }
+    </script>
+</body>
+</html>

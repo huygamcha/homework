@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D8BP2</title>
+    <style>
+        table{
+        }
+        table tr td:first-child{
+            width: 70px;
+            text-align: right;
+        }
+        table tr:first-child td:first-child{
+            text-align: left;
+        }
+        table tr td:nth-child(2){
+            display: inline;
+        }
+        table tr td:nth-child(3){
+            width: 90px;
+            text-align: right;
+        }
+        table tr:first-child td:nth-child(3){
+            text-align: left;
+        }
+        table tr td:nth-child(4){
+            width: 60px;
+            text-align: right;
+        }
+        table tr:first-child td:nth-child(4){
+            text-align: left;
+        }
+        table tr td:last-child{
+            width: 100px;
+            text-align: right;
+        }
+        table tr:first-child td:last-child{
+            text-align: left;
+        }
+        table tr:last-child td:last-child{
+            text-align: center;
+            width: 100px;
+        }
+        table tr:last-child td:first-child{
+            text-align: center;
+        }
+        .right{
+            display: block !important;
+             text-align: right !important;
+        }
+        
+    </style>
+</head>
+<body>
+    <script>
+         const users = [
+  { id: 1, name: 'iPhone 12 Pro Max', price: 250000000, quanlity: 1 },
+  { id: 2, name: 'Samsung Galaxy S21', price: 32000000, quanlity: 1 },
+  { id: 3, name: 'Xiaomi Note 11', price: 18000000, quanlity: 2 },
+  { id: 4, name: 'Galaxy Ford Pro', price: 47000000, quanlity: 1 },
+  { id: 5, name: 'OPPO Find N2 Flip 5G', price: 19990000, quanlity: 3 }
+];
+        let html = `<table>`
+        html += `<tr><td>ID</td><td>Name</td><td>Price</td><td>Quality</td><td>Amount</td></tr>`
+        let tong = 0
+        for (i in users){
+            tong += parseInt(users[i].price) * parseInt(users[i].quanlity)
+            html += `<tr><td>${users[i].id}</td><td>${users[i].name}</td><td>${users[i].price}</td><td>${users[i].quanlity}</td><td>${parseInt(users[i].price) * parseInt(users[i].quanlity)}</td></tr>`
+        }
+        html += `<tr><td colspan="4" >Total</td><td class='right'>${tong}</td></tr>`
+        html += `</table>`
+        document.write(html)
+    </script>
+</body>
+</html>
