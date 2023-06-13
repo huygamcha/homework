@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/resposive.css">
+    <title>WSD9</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header flex flex-between align-center">
+            <div class="header-home">
+                Logo
+            </div>
+            <div class="header-nav">
+                <ul class="header-list flex flex-between">
+                    <li class="header-item">Home</li>
+                    <li class="header-item">About</li>
+                    <li class="header-item">Blog</li>
+                    <li class="header-item">Contact</li>
+                </ul>
+                
+            </div>
+            <div onclick="myFunction()" id="header-nav-mobile">
+        </div>
+        </div>
+        <div class="content flex flex-between">
+            <div class="content-main ">
+                <div class="content-main-wrap flex">
+                    <div class="content-main-img">
+
+                    </div>
+                    <div class="content-main-des">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis porro earum delectus consequatur, voluptas esse quia ex repellendus explicabo blanditiis soluta excepturi quaerat nulla accusamus vitae aspernatur. Tenetur, soluta obcaecati.
+                    </div>
+                </div>
+                <div class="content-main-section">
+                    <ul class="main-section-list flex flex-between">
+                        <li class="main-section-item"></li>
+                        <li class="main-section-item"></li>
+                        <li class="main-section-item"></li>
+                        <li class="main-section-item"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content-aside">
+                
+            </div>
+        </div>
+        <div class="footer">
+            <ul class="footer-list flex flex-between">
+                <li class="footer-item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. A, ex! Facilis molestiae doloribus dicta? Odio impedit saepe deserunt ea rerum nam quia consectetur eligendi autem doloribus distinctio, adipisci, at qui.</li>
+                <li class="footer-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam exercitationem sit deleniti molestiae officia voluptatum cumque voluptatem ipsum ea quidem modi, tenetur aliquam nostrum saepe aut voluptatibus? Ad, sunt magnam!</li>
+                <li class="footer-item">3</li>
+                <li class="footer-item">4</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        function myFunction() {
+         var element = document.querySelector(".header-list");
+           element.classList.toggle('active');
+          
+            }
+    </script>
+</body>
+</html>

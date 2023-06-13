@@ -69,9 +69,10 @@
             tong += parseInt(users[i].price) * parseInt(users[i].quanlity)
             html += `<tr><td>${users[i].id}</td><td>${users[i].name}</td><td>${users[i].price}</td><td>${users[i].quanlity}</td><td>${parseInt(users[i].price) * parseInt(users[i].quanlity)}</td></tr>`
         }
-        html += `<tr><td colspan="4" >Total</td><td class='right'>${tong}</td></tr>`
+        html += `<tr><td colspan="4" >Total</td><td class='right'>${new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(tong)}</td></tr>`
+        
         html += `</table>`
         document.write(html)
-    </script>
+        </script>
 </body>
 </html>
