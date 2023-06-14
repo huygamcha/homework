@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day10</title>
+</head>
+<body>
+    <script>
+        // Session Storage
+        // kiểm tra có hỗ trợ storage hay không
+        if (typeof Storage !== 'undefined') {
+            console.log('<<=== yes ===>>');
+            // set cho giá trị
+            sessionStorage.setItem('name','huy');
+            sessionStorage.setItem('age','18');
+            sessionStorage.setItem('token','asdfawff')
+            // xoá đi giá trị
+            sessionStorage.removeItem('name')
+            // xoá toàn bộ key
+            sessionStorage.clear()
+        }
+    </script>
+</body>
+</html>

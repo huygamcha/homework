@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORKSHOP</title>
+</head>
+<style>
+    button{
+        width: 100px;
+        height: 30px;
+
+    }
+</style>
+<body>
+    <!-- <button onclick="deletename()">
+        Xoá
+    </button>
+    <button onclick="savename()">
+        Lưu
+    </button> -->
+    <button onclick="add()">
+        Thêm vào
+    </button>
+    <div id="result"></div>
+    <script>
+        // task1
+        // function deletename() {
+        //     localStorage.removeItem('name');
+        // }
+        // function savename() {
+        //     localStorage.setItem('name', 'huy')
+        // }
+        // task2
+      
+        let product = {
+            id: 1,
+            name: 'iphone 15',
+            price: 200,
+            quanlity: 1,
+        }
+        function getdata() {
+            if ( localStorage !== 'undefined') {
+                let products = localStorage.getItem('value');
+                if (products) return JSON.parse(products)
+            }
+        }
+
+        function add(){
+            // kiểm tra xem đã là mảng chưa, nếu chưa thì tự tạo
+            // sau đó thì push phần tử mới vào mảng đó
+            // sau đó thì mới đẩy mảng đó lên local storage
+            
+            // lấy về kiểm tra xem có phải là null hay không để tạo ra một mảng object
+            const a = localStorage.getItem('value');
+            if ( a === null ){
+
+                // lấy lần đầu
+                let  products = [];
+                products.push(product);
+                console.log(products);
+                localStorage.setItem('value', JSON.stringify(products))
+            }
+            else {
+                // bắt đầu lấy lần thứ hai
+                let products = JSON.parse(localStorage.getItem('value'))
+                products.push(product)
+                localStorage.setItem('value', JSON.stringify(products));
+            }
+            location.reload();
+            // console.log('<<=== products ===>>', products);
+
+            // Hàm in ra màn hình giá trị đã lấy
+            }
+        
+        // Hàm lấy giá trị 
+      
+        let html = `<ul>`
+        let products = getdata();
+        for (let i = 0; i < products.length; i++) {
+            html += `<li> ${products[i].name}  ${products[i].price}  ${products[i].quanlity}</li>`
+        }
+        html += `</ul>`
+        document.querySelector('#result').innerHTML = html
+        
+    </script>
+</body>
+</html>

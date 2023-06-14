@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day10</title>
+</head>
+<body>
+    <div class="header"></div>
+    <script>
+        // Local Storage
+        // kiểm tra có hỗ trợ storage hay không
+        // if (typeof Storage !== 'undefined') {
+        //     localStorage.setItem('name', 'huy')
+        // }
+        let value = localStorage.getItem('name')
+        console.log('<<=== value ===>>', value);
+
+        document.querySelector('.header').innerHTML = `${value}`;
+
+        //  // xoá đi giá trị
+        //  sessionStorage.removeItem('name')
+        // // xoá toàn bộ key
+        //  sessionStorage.clear()          
+
+
+    </script>
+</body>
+</html>
