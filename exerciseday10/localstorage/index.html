@@ -1,23 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ED10</title>
     <style>
-        button{
+        button {
             width: 150px;
-            height:50px;
+            height: 50px;
         }
     </style>
 </head>
+
 <body>
-    
+
     <button id="product1" onclick="add(this)">Product 1</button>
     <button id="product2" onclick="add(this)">Product 2</button>
     <button id="product3" onclick="add(this)">Product 3</button>
     <button id="product4" onclick="add(this)">Product 4</button>
+    <div id="result"></div>
     <script>
+        // tìm id
+        function findid(a, b, id) {
+            for (let i = 0; i < a.length; i++) {
+                if (a[i].id === b) {
+                    return i
+                }
+            }
+        }
         let product1 = {
             id: 1,
             name: 'Product 1',
@@ -42,9 +53,100 @@
             price: 1000,
             quanlity: 1
         }
-        function add(button){
-            let targe
+        function add(button) {
+            let targetbutton = button.id;
+            if (targetbutton) {
+                let a = localStorage.getItem('value');
+                if (a === null) {
+                    let products = []
+                    switch (targetbutton) {
+                        case 'product1':
+                            products.push(product1);
+                            break;
+                        case 'product2':
+                            products.push(product2);
+                            break;
+                        case 'product3':
+                            products.push(product3);
+                            break;
+                        case 'product4':
+                            products.push(product4);
+                            break;
+                    }
+                    localStorage.setItem('value', JSON.stringify(products));
+                }
+                else {
+                    let products = JSON.parse(localStorage.getItem('value'));
+                    switch (targetbutton) {
+                        case 'product1':
+                            let getid1 = findid(products, 1, 1)
+                            if (getid1 || getid1 === 0) {
+                                products[getid1].quanlity++
+                            }
+
+                            else {
+                                products.push(product1);
+                            }
+                            break;
+                        case 'product2':
+                            let getid2 = findid(products, 2, 2)
+
+                            if (getid2 || getid2 === 0) {
+                                products[getid2].quanlity++
+                            }
+
+                            else {
+
+                                products.push(product2);
+                            }
+                            break;
+                        case 'product3':
+                            let getid3 = findid(products, 3, 3)
+                            if (getid3 || getid3 === 0) {
+                                products[getid3].quanlity++
+                            }
+
+                            else {
+
+                                products.push(product3);
+                            }
+                            break;
+                        case 'product4':
+                            let getid4 = findid(products, 4, 4)
+                            if (getid4 || getid4 === 0) {
+                                products[getid4].quanlity++
+                            }
+
+                            else {
+
+                                products.push(product4);
+                            }
+                            break;
+
+                    }
+                    localStorage.setItem('value', JSON.stringify(products));
+
+                }
+            }
+            location.reload();
         }
+        // Hàm in ra
+        function getdata() {
+            if (Storage !== 'undefined') {
+                let data = JSON.parse(localStorage.getItem('value'));
+                if (data) return data;
+            }
+        }
+        let html = `<li>`
+        let a = getdata();
+        for (let i = 0; i < a.length; i++) {
+            html += `<li> ${a[i].id} ${a[i].name} ${a[i].price} ${a[i].quanlity}</li>`;
+        }
+        html += `</li>`
+        document.querySelector('#result').innerHTML = html;
+
+
     </script>
 </body>
+
 </html>
