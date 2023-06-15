@@ -142,12 +142,12 @@
                 if (data) return data;
             }
         }
-        let html = `<li>`
+        let html = `<ul>`
         let a = getdata();
         for (let i = 0; i < a.length; i++) {
             html += `<li> ${a[i].id} ${a[i].name} ${a[i].price} ${a[i].quanlity}</li>`;
         }
-        html += `</li>`
+        html += `</ul>`
         document.querySelector('#result').innerHTML = html;
 
 
