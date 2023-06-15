@@ -19,6 +19,7 @@
     <button id="product2" onclick="add(this)">Product 2</button>
     <button id="product3" onclick="add(this)">Product 3</button>
     <button id="product4" onclick="add(this)">Product 4</button>
+    <button onclick="clearAll()">Clear</button>
     <div id="result"></div>
     <script>
         // tìm id
@@ -52,6 +53,10 @@
             name: 'Product 4',
             price: 1000,
             quanlity: 1
+        }
+        function clearAll() {
+            localStorage.clear();
+            location.reload();
         }
         function add(button) {
             let targetbutton = button.id;
