@@ -15,9 +15,11 @@
         .content {
             position: relative;
         }
-        ul{
+
+        ul {
             list-style-type: none;
         }
+
         .content-about {
             position: absolute;
             top: 0;
@@ -26,17 +28,19 @@
         .flex {
             display: flex;
         }
-        .align{
+
+        .align {
             align-items: center;
         }
+
         .content-about {
             width: 100%;
             justify-content: space-between;
             align-items: center;
             padding: 2% 5% 0%;
         }
-        
-        .modalhand{
+
+        .modalhand {
             position: fixed;
             top: 0;
             bottom: 0;
@@ -44,30 +48,39 @@
             right: 0;
             background: rgba(0, 0, 0, 0.4);
             display: none;
-      
+
         }
-        .modalhand.open{
+
+        .modalhand.open {
             display: block;
         }
-        .modal-content{
+
+        .modalhand.open svg {
+            fill: #000;
+        }
+
+        .modal-content {
             position: absolute;
             top: 0;
             right: 0;
             width: 20%;
             height: 100%;
             background-color: #fff;
-            animation: Fadein 0.2s linear ;
+            animation: Fadein 0.2s linear;
         }
-        .modal-header{
+
+        .modal-header {
             width: 100%;
             height: 20%;
             display: flex;
             flex-flow: row-reverse;
         }
-        .modal-item{
+
+        .modal-item {
             padding: 5%;
             font-size: 20px;
         }
+
         h1 {
             margin: 0;
             font-weight: 400;
@@ -109,35 +122,43 @@
                 opacity: 1;
             }
         }
+
         @keyframes Fadein {
             0% {
                 transform: translateX(100%);
                 opacity: 0;
             }
+
             100% {
                 transform: translateX(0);
                 opacity: 1;
             }
         }
+
         @keyframes Fadedown {
             0% {
-             opacity: 0;   
+                opacity: 0;
             }
+
             20% {
-             opacity: 0.2;   
+                opacity: 0.2;
             }
+
             40% {
-             opacity: 0.4;   
+                opacity: 0.4;
             }
+
             60% {
-             opacity: 0.6;   
+                opacity: 0.6;
             }
+
             80% {
-             opacity: 0.8;   
+                opacity: 0.8;
             }
+
             100% {
                 opacity: 1;
-            
+
             }
         }
 
@@ -152,7 +173,6 @@
         }
 
         .btn-secondary:hover svg {
-
             fill: #000
         }
 
@@ -160,22 +180,26 @@
             background: #90c317;
             border-color: #90c317;
         }
-        .modal-item-header{
+
+        .modal-item-header {
             justify-content: space-between;
         }
-        .modal-item-body{
+
+        .modal-item-body {
             display: none;
-            
+
         }
-        .modal-item-body.open{
+
+        .modal-item-body.open {
             display: block;
-            animation: Fadedown 0.5s linear ;
-            
+            animation: Fadedown 0.5s linear;
         }
-        .modal-item-body-product{
+
+
+
+        .modal-item-body-product {
             padding-top: 10%;
         }
-   
     </style>
 </head>
 
@@ -253,29 +277,44 @@
                             d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z" />
                     </svg>
                     Post a Job</button>
-                <button type="button" class="btn btn-success" style=" margin-right: 6px; background: #89ba16; background-color: #89ba16;">
+                <button type="button" class="btn btn-success"
+                    style=" margin-right: 6px; background: #89ba16; background-color: #89ba16;">
                     <svg xmlns="http://www.w3.org/2000/svg" height="1em"
                         viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                         <path
                             d="M144 144v48H304V144c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192V144C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64H80z" />
                     </svg>
                     Log in</button>
-                    <div class="content-select" >
-                        <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffffff}</style><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
-                    </div>
+                <div class="content-select">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="2em"
+                        viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <style>
+                            svg {
+                                fill: #ffffff
+                            }
+                        </style>
+                        <path
+                            d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+                    </svg>
+                </div>
             </div>
-         
+
         </div>
     </div>
     <!-- Button trigger modal -->
 
-  
-  <!-- Modal -->
+
+    <!-- Modal -->
     <div class="modalhand">
         <div class="modal-content">
 
             <div class="modal-header">
-                <svg class="modal-header-close" xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#000000}</style><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+                <svg class="modal-header-close" xmlns="http://www.w3.org/2000/svg" height="2em"
+                    viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+
+                    <path
+                        d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+                </svg>
             </div>
             <div class="modal-body">
                 <ul class="modal-list">
@@ -287,7 +326,11 @@
                                 Job listings
                             </div>
                             <div class="modal-item-down flex">
-                                <svg class="modal-item-down" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M182.6 470.6c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-9.2-9.2-11.9-22.9-6.9-34.9s16.6-19.8 29.6-19.8H288c12.9 0 24.6 7.8 29.6 19.8s2.2 25.7-6.9 34.9l-128 128z"/></svg>
+                                <svg class="modal-item-down" xmlns="http://www.w3.org/2000/svg" height="1em"
+                                    viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                    <path
+                                        d="M182.6 470.6c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-9.2-9.2-11.9-22.9-6.9-34.9s16.6-19.8 29.6-19.8H288c12.9 0 24.6 7.8 29.6 19.8s2.2 25.7-6.9 34.9l-128 128z" />
+                                </svg>
 
                             </div>
                         </div>
@@ -298,23 +341,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="modal-item">
-                        <div class="modal-item-header flex">
-                            <div class="modal-item-label">
-                                Pages
-                            </div>
-                            <div class="modal-item-down flex">
-                                <svg class="modal-item-down" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M182.6 470.6c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-9.2-9.2-11.9-22.9-6.9-34.9s16.6-19.8 29.6-19.8H288c12.9 0 24.6 7.8 29.6 19.8s2.2 25.7-6.9 34.9l-128 128z"/></svg>
 
-                            </div>
-                        </div>
-                        <div class="modal-item-body">
-                            <ul class="modal-item-body-list">
-                                <li class="modal-item-body-product">Job Single</li>
-                                <li class="modal-item-body-product">Post a Job</li>
-                            </ul>
-                        </div>
-                    </li>
                     <li class="modal-item">Blog</li>
                     <li class="modal-item">Contact</li>
                 </ul>
