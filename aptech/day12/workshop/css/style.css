@@ -10,6 +10,13 @@ h1 {
     font-weight: 200;
 }
 
+h5 {
+    color: #9a9a9a;
+    font-size: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 2rem;
+}
+
 .container {
     max-width: 1440px;
 }
@@ -40,9 +47,7 @@ ul {
     /* clip-path: inset(0 0 25% 0); */
 }
 
-.header-nav {
-    padding: 0 10%;
-}
+.header-nav {}
 
 .nav-link {
     color: #ffffff;
@@ -131,4 +136,10 @@ ul {
 
 .downloadThis {
     margin-top: 200px;
+}
+
+.des-character {
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 46px;
 }

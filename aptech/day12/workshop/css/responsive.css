@@ -1,0 +1,10 @@
+@media screen and (max-width: 769px) {
+    .beautiful-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .beautiful-sub {
+        max-width: none;
+    }
+}
