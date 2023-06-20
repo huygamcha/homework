@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkshopJquery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* dùng cho task 2 */
+        /* button {
+            border: none;
+            background-color: #fff;
+            cursor: pointer;
+        } */
+
+        #nav {
+            display: none;
+        }
+
+        #nav.active {
+            display: block;
+        }
+
+        button,
+        input,
+        select {
+            max-width: 300px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <!-- task1 -->
+    <!-- <button id="toggleBtn">
+        <i class="fa-solid fa-bars" style="color:#000; font-size: 2rem;"></i>
+    </button>
+    <nav class="flex-column" id="nav">
+        <a class="nav-link" aria-current="page" href="#">Active</a>
+        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->
+    <!-- </nav> -->
+    <!-- task3 -->
+    <!-- <ul id="list">
+        <li class="child_one">Child 1</li>
+        <li class="child_two">
+            <img src="./hinh10.jpeg" alt="photo" />
+        </li>
+        <li class="child_three"><a href="link3">Child 3</a></li>
+    </ul> -->
+    <!-- task 4 -->
+    <!-- <input placeholder="username" type="text" name="username" value="" />
+    <input placeholder="password" type="text" name="password" value="" /> -->
+    <label for="Hãy nhập biểu thức">Hãy nhập biểu thức</label>
+    <div class="d-flex flex-column">
+        <input type="number" name="firstname" id="firstname">
+        <input type="number" name="secondname" id="secondname">
+        <select name="math" id="math">
+            <option value="0">--Nhập giá trị của biểu thức--</option>
+            <option value="1">Add</option>
+            <option value="2">Sub</option>
+            <option value="3">Mul</option>
+            <option value="4">Div</option>
+        </select>
+        <button type="submit" id="click">Submit</button>
+    </div>
+    <div id="result">
+
+    </div>
+    <script>
+        // task1
+        $('#click').on('click', function () {
+            let a = parseInt($('#firstname').val())
+            let b = parseInt($('#secondname').val())
+            let c = parseInt($('#math').val())
+            switch ((c)) {
+                case 0:
+                    console.log('Vui lòng chọn biểu thức');
+                    break;
+                case 1:
+                    console.log('Tổng của 2 biểu thức là', (a + b).toFixed(2));
+                    break;
+                case 2:
+                    console.log('Hiệu của 2 biểu thức là', (a - b).toFixed(2));
+                    break;
+                case 3:
+                    console.log('Tích của 2 biểu thức là', (a * b).toFixed(2));
+                    break;
+                case 4:
+                    console.log('Thương của 2 biểu thức là', (a / b).toFixed(2));
+                    break;
+                default:
+                    console.log('Vui lòng chọn biểu thức');
+            }
+        }
+        )
+
+
+
+        // task 2
+        // $('#toggleBtn').on('click', function () {
+        //     // cách 1 hiện ra với toggleClass
+        //     // $('#nav').toggleClass('active')
+        //     // cách 2 hiện ra với fadein(với speed)
+        //     // $('#nav').fadeIn(3000)
+        //     // cách 3 hiện ra với slideDown
+        //     // $('#nav').slideDown(3000)
+        // })
+        // task 3
+        // add thêm class vào id#list
+        // $('#list').addClass('list')
+        // // console ra nội dung của thẻ li đầu tiên
+        // console.log($('#list>li:first-child()').text())
+        // // lấy ra thuộc tính src và alt của thẻ li thứ 2
+        // console.log($('#list>li:nth-child(2) img').attr('src'))
+        // console.log($('#list>li:nth-child(2) img').attr('alt'))
+        // // Thay đổi: thuộc tính src và alt từ thẻ img bằng một giá trị mới
+        // $('#list>li:nth-child(2) img').attr('src', 'face1.jpeg')
+        // console.log($('#list>li:nth-child(2) img').attr('alt', 'face1'))
+        // // Lấy tên class của thẻ li thứ 3, hiển thị ra console
+        // console.log($('#list>li:last-child()').attr('class'))
+
+        // task4
+        // Bước 1: Add cho 2 input nói trên 2 giá trị tương ứng vào thuộc tính value
+        // $('input[name="username"]').attr('value', 1)
+        // $('input[name="password"]').attr('value', 2)
+        // // Bước 2: Add cho 2 input nói trên 2 thuộc tính id
+        // $('input[name="username"]').attr('id', 'username')
+        // $('input[name="password"]').attr('id', 'password')
+        // // Bước 3: Lấy 2 giá trị vừa add ở bước 1 dựa vào id đã thêm ở bước 2, rồi show kết quả ra console
+        // console.log($('input[name="username"]').attr('id'))
+        // console.log($('input[name="password"]').attr('id'))
+
+
+    </script>
+</body>
+
+</html>
