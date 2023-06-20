@@ -1,9 +1,13 @@
+@media screen and (max-width: 1441px) and (min-width: 769px) {
+   .advise-header-integrate{
+    margin-left: 100px;
+   }
+}
 @media screen and (max-width: 769px) {
     .beautiful-img {
         width: 100%;
         height: auto;
     }
-
     .beautiful-sub {
         max-width: none;
     }
