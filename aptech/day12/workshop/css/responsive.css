@@ -19,7 +19,9 @@
     .d-small-none {
         display: none;
     }
-
+    .d-small-block{
+        display: block;
+    }
     .unsetposition {
         position: unset;
     }
@@ -44,12 +46,10 @@
     .advise-header-integrate {
         margin-top: 80px;
     }
-
     .col-sm-4 {
         flex: 0 0 auto;
         width: 33.33333333333%;
     }
-
     .col-sm-12 {
         flex: 0 0 auto;
         width: 100%;
@@ -65,5 +65,11 @@
     }
     .p-sm-12{
         padding: 12px;
+    }
+    .card-img-overlay-ms{
+        background: black;
+          padding: 0;
+          width: -6px;
+          height: 72px;
     }
 }
