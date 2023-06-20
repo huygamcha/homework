@@ -1,30 +1,134 @@
-*{
+* {
     padding: 0;
     margin: 0;
     outline: 0;
     box-sizing: border-box;
 }
-.header-background{
-    background-image: url();
-    background-repeat: no-repeat;
-    background-size: contain;
+
+h1 {
+    text-transform: uppercase;
+    font-weight: 200;
 }
-.header-background .card-img{
+
+.container {
+    max-width: 1440px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.b0 {
+    bottom: 0;
+}
+
+.t15 {
+    top: 15%;
+}
+
+.header-backgound {
+    position: relative;
+    background-image: url('https://demos.creative-tim.com/awesome-landing-page/assets/img/template/bg3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 650px;
+    overflow: hidden;
+}
+
+.header-background .card-img {
     /* clip-path: inset(0 0 25% 0); */
 }
-.header-nav{
+
+.header-nav {
     padding: 0 10%;
 }
-.nav-link{
+
+.nav-link {
     color: #ffffff;
 }
-.header-background{
+
+.header-background {
     position: relative;
 }
-.header-background::after{
+
+.header-backgound::after {
     position: absolute;
     content: '';
     display: block;
     top: 0;
     left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(57, 113, 117, 0.7);
+
+}
+
+.header-background-sub {
+    padding: 48px 0;
+}
+
+.customer-header {
+    padding: 48px 0px 0px;
+    color: #9f9f9f;
+    font-weight: 200;
+}
+
+.customer-sub {
+    padding: 32px 0px;
+    max-width: 920px;
+    text-align: center;
+    color: #474747;
+}
+
+.customer-list {
+    padding-top: 32px;
+}
+
+.advise-header {
+    color: #9f9f9f;
+
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    display: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+}
+
+.carousel-indicators [data-bs-target] {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    padding: 0;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    border: 2px solid #0bf;
+    background-clip: padding-box;
+    opacity: .5;
+    background-color: transparent;
+    transition: opacity .6s ease;
+}
+
+.carousel-indicators {
+    bottom: -60px;
+}
+
+.carousel-indicators .active {
+    background-color: #00bbff !important;
+}
+
+/* phần features */
+.card-features {
+    text-align: center !important;
+    height: 20rem;
+    border: 1px solid #cce7f5;
+}
+
+.downloadThis {
+    margin-top: 200px;
 }

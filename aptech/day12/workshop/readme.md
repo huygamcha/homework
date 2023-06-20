@@ -1,0 +1,1 @@
+carousel để cho phần info tách ra khỏi img thì ta xoá đi class carousel-caption
