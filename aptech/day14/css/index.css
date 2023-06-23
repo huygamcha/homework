@@ -1,0 +1,16 @@
+.owl-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 6rem;
+    font-weight: 100;
+}
+
+.owl-theme .owl-nav [class*=owl-]:hover {
+    background: none !important;
+    color: #000 !important;
+    text-decoration: none;
+}
