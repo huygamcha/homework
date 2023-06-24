@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.tailwindcss.com/2.2.19/tailwind.min.css" rel="stylesheet">
+    <!-- icon boostrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/product.css">
@@ -21,6 +24,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
 </head>
 
@@ -135,13 +139,181 @@
             </li>
         </ul>
     </div>
-    <div class="container">
-        <div class="recommend">
-            <div class="recommend-name">
+    <div class="container mx-auto">
+        <div class="recommend text-center">
+            <div class="recommend-name text-center text-3xl	font-semibold ">
+                Recommend for you
+            </div>
+            <ul class="recommend-list flex justify-center uppercase">
+                <li
+                    class="tracking-wider recommend-item m-2 px-6 py-1 border border-slate-500 hover:bg-black hover:text-white hover:cursor-pointer ">
+                    new
+                    arrival</li>
+                <li
+                    class=" tracking-wider recommend-item m-2 px-6 py-1 border border-slate-500 hover:bg-black hover:text-white hover:cursor-pointer ">
+                    best
+                    selling</li>
+                <li
+                    class="tracking-wider recommend-item m-2 px-6 py-1 border border-slate-500 hover:bg-black hover:text-white hover:cursor-pointer ">
+                    on
+                    sale</li>
+                <li
+                    class="tracking-wider recommend-item m-2 px-6 py-1 border border-slate-500 hover:bg-black hover:text-white hover:cursor-pointer ">
+                    featured</li>
+            </ul>
+        </div>
+        <ul class="recommend-list grid grid-cols-4 gap-4">
+            <li class="recommend-item">
+                <img data-first="https://cdn.shopify.com/s/files/1/0085/5618/3637/products/Sample_Product_Image4-28_3472cc34-af73-48db-8e67-b14cc0a1acc0_540x.jpg?v=1622189737"
+                    data-second="https://cdn.shopify.com/s/files/1/0085/5618/3637/products/Sample_Product_Image8-21_a8aee956-e160-4aa2-a04b-075e0d4ad8f5_540x.jpg?v=1622189737"
+                    src="https://cdn.shopify.com/s/files/1/0085/5618/3637/products/Sample_Product_Image4-28_3472cc34-af73-48db-8e67-b14cc0a1acc0_540x.jpg?v=1622189737"
+                    alt="">
+            </li>
+            <li class="recommend-item"><img
+                    src="https://cdn.shopify.com/s/files/1/0085/5618/3637/products/Sample_Product_Image.4_720x.jpg?v=1597652543"
+                    alt=""></li>
+            <li class="recommend-item"><img
+                    src="https://cdn.shopify.com/s/files/1/0085/5618/3637/products/phone_case-03_540x.jpg?v=1597652212"
+                    alt=""></li>
+            <li class="recommend-item"><img
+                    src="https://cdn.shopify.com/s/files/1/0085/5618/3637/products/Sample_Product_Image-Recovered-18_540x.jpg?v=1597651890"
+                    alt=""></li>
+            <li class="recommend-item"><img
+                    src="https://cdn.shopify.com/s/files/1/0085/5618/3637/products/silocon-case02_540x.jpg?v=1597651432"
+                    alt=""></li>
+            <li class="recommend-item"><img
+                    src="https://cdn.shopify.com/s/files/1/0085/5618/3637/products/Sample_Product_Image.1_720x.jpg?v=1597650560"
+                    alt=""></li>
+            <li class="recommend-item"><img
+                    src="https://cdn.shopify.com/s/files/1/0085/5618/3637/products/Sample_Product_Image5-16_540x.jpg?v=1597649319"
+                    alt=""></li>
+            <li class="recommend-item"><img
+                    src="https://cdn.shopify.com/s/files/1/0085/5618/3637/products/Sample_Product_Image7-14_540x.jpg?v=1597638493"
+                    alt=""></li>
+        </ul>
+        <div class="banner grid grid-cols-3">
+            <div class="banner-item flex justify-center">
+                <img src="https://cdn.shopify.com/s/files/1/0085/5618/3637/files/Banner_01_720x.jpg?v=1613697134"
+                    alt="">
+            </div>
+            <div class="banner-item flex justify-center">
+                <img src="https://cdn.shopify.com/s/files/1/0085/5618/3637/files/Banner_02_720x.jpg?v=1613697134"
+                    alt="">
+            </div>
+            <div class="banner-item flex justify-center">
+                <img src="https://cdn.shopify.com/s/files/1/0085/5618/3637/files/Banner_03_720x.jpg?v=1613697134"
+                    alt="">
+            </div>
 
+        </div>
+        <div class="featured-items">
+            <div class="featured-item-name text-center text-3xl	font-semibold ">
+                Featured Items
+            </div>
+            <div class="featured-item-des text-center">
+                Find a bright ideal to suit your taste with our great selection of suspension, wall, floor and table
+                light
+            </div>
+            <div class="featured-item-list grid grid-cols-3">
+                <div class="featured-item-product">
+                    <img src="https://cdn.shopify.com/s/files/1/0085/5618/3637/products/Sample_Product_Image.4_720x.jpg?v=1597652543"
+                        alt="">
+                </div>
+                <div class="featured-item-product">
+                    <img src="https://cdn.shopify.com/s/files/1/0085/5618/3637/products/Sample_Product_Image.1_1080x.jpg?v=1597650560"
+                        alt="">
+                </div>
+                <div class="featured-item-product">
+                    <img src="https://cdn.shopify.com/s/files/1/0085/5618/3637/products/Sample_Product_Image8-7_720x.jpg?v=1597638043"
+                        alt="">
+                </div>
             </div>
         </div>
     </div>
+
+    <div class="discount">
+        <img src="https://cdn.shopify.com/s/files/1/0085/5618/3637/files/Banner_04.jpg?v=1613697134" alt="">
+    </div>
+    <div class="container mx-auto text-center pt-10">
+        <div class="policy">
+            <ul class="policy-list flex justify-center">
+                <li class="policy-item p-4 border-slate-200 border mr-6 w-64">
+                    <i class="fa-regular fa-paper-plane"></i>
+                    <div class="policy-item-header">
+                        Free Shipping
+                    </div>
+                    <div class="policy-item-des">
+                        Free Shipping for all US order
+                    </div>
+
+                </li>
+                <li class="policy-item p-4 border-slate-200 border mr-6 w-64">
+                    <i class="fa-solid fa-headphones"></i>
+                    <div class="policy-item-header">
+                        Support 24/7
+                    </div>
+                    <div class="policy-item-des">
+                        We support 24h a day
+                    </div>
+                </li>
+                <li class="policy-item p-4 border-slate-200 border mr-6 w-64">
+                    <i class="fa-solid fa-arrow-rotate-left"></i>
+                    <div class="policy-item-header">
+                        100% Money Back
+                    </div>
+                    <div class="policy-item-des">
+                        You have 30 days to Return
+                    </div>
+                </li>
+                <li class="policy-item p-4 border-slate-200 border mr-6 w-64">
+                    <i class="fa-solid fa-gift"></i>
+                    <div class="policy-item-header">
+                        Payment Secure
+                    </div>
+                    <div class="policy-item-des">
+                        We ensure secure payment
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="footer grid grid-cols-2 gap-16 text-left mt-4">
+            <div class="footer-socials grid grid-cols-2 my-auto ">
+                <div class="footer-socials-name">
+                    Elessi
+                </div>
+                <div class="footer-socials-list flex flex-row-reverse">
+                    <div class="footer-socials-item ml-4">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </div>
+                    <div class="footer-socials-item ml-4">
+                        <i class="fa-brands fa-twitter"></i>
+                    </div>
+                    <div class="footer-socials-item ml-4">
+                        <i class="fa-brands fa-google-plus-g"></i>
+                    </div>
+                    <div class="footer-socials-item ml-4">
+                        <i class="fa-brands fa-pinterest"></i>
+                    </div>
+                    <div class="footer-socials-item ml-4">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-newsletter grid grid-cols-2 my-auto">
+                <div class="footer-newsletter-name my-auto">Newsletter</div>
+                <div class="footer-newsletter-sub">
+                    <input type="text"
+                        class="px-4 py-2 border border-gray-300  focus:outline-none focus:border-blue-500">
+                    <button type="submit" class="border-2 p-2 bg-slate-100 uppercase">subscribe</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <input type="text" name="email" id="email">
+    </div>
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
         integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -159,6 +331,21 @@
             // autoplay: true,
             autoplaySpeed: 2000
         })
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        // Get the first and second data attribute values
+        var firstImage = $("img").data('first');
+        var secondImage = $("img").data('second');
+        console.log('firstImage', firstImage);
+        // Change the image source based on the data attributes
+        $("img").attr('src', firstImage); // Set the initial image source
+
+        // On some event or condition, switch to the second image
+        $(".recommend-item").on('click', function () {
+            $("img").attr('src', secondImage); // Change the image source to the second image
+        });
+
     </script>
 </body>
 
