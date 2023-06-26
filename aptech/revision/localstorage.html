@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>localstorage</title>
+</head>
+
+<body>
+    <button type="submit">Product 1</button>
+    <button type="submit">Product 2</button>
+    <button type="submit">Product 3</button>
+    <button type="submit">Product 4</button>
+    <div id="result"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        function getdata() {
+            if (typeof Storage !== 'undefined') {
+                return JSON.parse(localStorage.getItem('products'))
+            }
+        }
+        $('button').on('click', function () {
+            let value = localStorage.getItem('products')
+            if (value === null) {
+                let products = [];
+                switch ($(this).text()) {
+                    case 'Product 1':
+                        products.push(product1);
+                        localStorage.setItem('products', JSON.stringify(products))
+                        break;
+                    case 'Product 2':
+                        products.push(product2);
+                        localStorage.setItem('products', JSON.stringify(products))
+                        break;
+                    case 'Product 3':
+                        products.push(product3);
+                        localStorage.setItem('products', JSON.stringify(products))
+                        break;
+                    case 'Product 4':
+                        products.push(product4);
+                        localStorage.setItem('products', JSON.stringify(products))
+                        break;
+                }
+            }
+            else {
+                let products = JSON.parse(localStorage.getItem('products'))
+                switch ($(this).text()) {
+                    case 'Product 1':
+                        // kiểm tra xem product đã được thêm trước đó chưa nếu rồi thì tăng quanlity lên 1
+                        let a = products.findIndex(value => value.name === 'Product 1')
+                        if (a >= 0) {
+                            products[a].quanlity++
+                            localStorage.setItem('products', JSON.stringify(products))
+                        }
+                        // nếu chưa thì push mới vào
+                        else {
+                            products.push(product1)
+                            localStorage.setItem('products', JSON.stringify(products))
+                        }
+                        break;
+                    case 'Product 2':
+                        // kiểm tra xem product đã được thêm trước đó chưa nếu rồi thì tăng quanlity lên 1
+                        let d = products.findIndex(value => value.name === 'Product 2')
+                        if (d >= 0) {
+                            products[d].quanlity++
+                            localStorage.setItem('products', JSON.stringify(products))
+                        }
+                        // nếu chưa thì push mới vào
+                        else {
+                            products.push(product2)
+                            localStorage.setItem('products', JSON.stringify(products))
+                        }
+                        break;
+                    case 'Product 3':
+                        // kiểm tra xem product đã được thêm trước đó chưa nếu rồi thì tăng quanlity lên 1
+                        let b = products.findIndex(value => value.name === 'Product 3')
+                        if (b >= 0) {
+                            products[b].quanlity++
+                            localStorage.setItem('products', JSON.stringify(products))
+                        }
+                        // nếu chưa thì push mới vào
+                        else {
+                            products.push(product3)
+                            localStorage.setItem('products', JSON.stringify(products))
+                        }
+                        break;
+                    case 'Product 4':
+                        // kiểm tra xem product đã được thêm trước đó chưa nếu rồi thì tăng quanlity lên 1
+                        let c = products.findIndex(value => value.name === 'Product 4')
+                        if (c >= 0) {
+                            products[c].quanlity++
+                            localStorage.setItem('products', JSON.stringify(products))
+                        }
+                        // nếu chưa thì push mới vào
+                        else {
+                            products.push(product4)
+                            localStorage.setItem('products', JSON.stringify(products))
+                        }
+                        break;
+
+                }
+            }
+            location.reload();
+        }
+        )
+        let product1 = {
+            id: 1,
+            name: 'Product 1',
+            price: 1000,
+            quanlity: 1
+        }
+        let product2 = {
+            id: 2,
+            name: 'Product 2',
+            price: 1000,
+            quanlity: 1
+        }
+        let product3 = {
+            id: 3,
+            name: 'Product 3',
+            price: 1000,
+            quanlity: 1
+        }
+        let product4 = {
+            id: 4,
+            name: 'Product 4',
+            price: 1000,
+            quanlity: 1
+        }
+
+        // Hàm render ra kết quả
+        function render() {
+            let html = `<ul>`
+            let result = getdata()
+            for (let index of result) {
+                html += `<li>${index.id} ${index.name} ${index.price} ${index.quanlity}</li>`
+            }
+            html += `</ul>`
+            $('#result').html(html)
+        }
+        render()
+
+    </script>
+</body>
+
+</html>
