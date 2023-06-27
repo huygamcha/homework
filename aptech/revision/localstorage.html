@@ -12,6 +12,7 @@
     <button type="submit">Product 2</button>
     <button type="submit">Product 3</button>
     <button type="submit">Product 4</button>
+    <button type="submit">Clear</button>
     <div id="result"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
         integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
@@ -43,6 +44,7 @@
                         products.push(product4);
                         localStorage.setItem('products', JSON.stringify(products))
                         break;
+
                 }
             }
             else {
@@ -99,6 +101,9 @@
                             products.push(product4)
                             localStorage.setItem('products', JSON.stringify(products))
                         }
+                        break;
+                    case 'Clear':
+                        localStorage.clear();
                         break;
 
                 }
