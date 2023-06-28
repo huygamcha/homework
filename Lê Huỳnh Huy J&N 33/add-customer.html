@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        form {
+            margin: 16px 8px 0px;
+            padding-bottom: 16px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .input-row {
+            display: flex;
+            margin-bottom: 6px;
+        }
+
+        input {
+            width: 100%;
+        }
+
+        form label {
+            /* display: block; */
+            min-width: 120px;
+            padding: 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <h1>Creat a new customer</h1>
+        <div class="input-row">
+            <label for="first-name">Name</label>
+            <input autofocus required minlength="4" maxlength="255" placeholder="First name" type="text" name=""
+                id="name">
+        </div>
+        <div class="d-flex justify-content-between">
+            <div class="input-row ">
+                <label for="tel">Mobile</label>
+                <input required pattern="(84|0[3|5|7|8|9])+([0-9]{8})" placeholder="Mobile" type="Mobile" name=""
+                    id="mobile">
+            </div>
+            <div class="input-row">
+                <label for=" email">Email</label>
+                <input required placeholder="Email" type="email" name="" id="email">
+            </div>
+        </div>
+        <div class="input-row">
+            <label for="address">Address</label>
+            <input required placeholder="Address" type="address" name="" id="address">
+        </div>
+        <div class="input-row">
+            <label for="age">Age</label>
+            <input required min="18" max="100" placeholder="Age" type="number" name="" id="age">
+        </div>
+
+        <div class="input-row d-flex align-items-center">
+            <label for="gender">Gender</label>
+            <!-- name giống nhau để click 1 trong 2 -->
+            <!-- xoá phần for của thẻ label đi -->
+            <input type="radio" name="gender" id="gender" value="male" style="width: 20px;">Male
+            <!-- mặc định đánh check trước -->
+            <input checked type="radio" name="gender" id="gender" value="female" style="width: 20px;">Female
+
+        </div>
+        <div class="input-row">
+            <label for="provice">Provice/City</label>
+            <select required name="provice" id="provice" style="width: 100%;">
+                <option value="0">--Vui lòng chọn tỉnh/thành phố--</option>
+                <option value="Hà Nội">Hà Nội</option>
+                <option value="TP HCM">TP HCM</option>
+                <option selected value="Đà Nẵng">Đà Nẵng</option>
+            </select>
+        </div>
+        <div class="input-row justify-content-center">
+            <input onclick="render()" type="submit" value="submit" style="width: 100px;">
+        </div>
+
+    </form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        function render() {
+            if (typeof Storage !== 'undefined') {
+                let value = localStorage.getItem('products')
+                if (value === null) {
+                    let products = {
+                        name: $('#name').val(),
+                        mobile: $('#mobile').val(),
+                        email: $('#email').val(),
+                        address: $('#address').val(),
+                        age: $('#age').val(),
+                        provice: $('#provice').val(),
+
+                    }
+                    localStorage.setItem('products', JSON.stringify(products))
+                }
+
+            }
+        }
+    </script>
+</body>
+
+</html>
